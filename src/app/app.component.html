@@ -5,21 +5,64 @@
     alt="Angular Logo"
     src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
   />
-  <span>Welcome</span>
-    <div class="spacer"></div>
+  <span>Saving Glaciers</span>
+  <div class="spacer"></div>
 </div>
 
 <div class="content" role="main">
-<h4>Below data is coming from RESTful Web API developed in SpringBoot using JDBC and MySQL:</h4>
-<div>
-  <ul>
-    <li>Id: {{student?.studentId}}</li>
-    <li>Name: {{student?.studentName}}</li>
-    <li>Email: {{student?.studentEmail}}</li>
-    <li>Course: {{student?.studentCourse}}</li>
-  </ul>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">HouseId</th>
+        <th scope="col">HouseAddress</th>
+        <th scope="col">ZipCode</th>
+        <th scope="col">RecycleQuantity</th>
+        <th scope="col">LandfillQuantity</th>
+        <th scope="col">Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let country of student; index as i">
+        <td>{{ country.houseID | number }}</td>
+        <td>{{ country.houseAddress }}</td>
+        <td>{{ country.zipCode }}</td>
+        <td>{{ country.recycledQuantity | number }}</td>
+        <td>{{ country.landfillQuantity | number }}</td>
+        <td>{{ country.date }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
+<div class="content"> 
+  <form [formGroup]="garbageForm" *ngIf="garbageForm">
+  
+    <label>
+      House Address:
+      <input type="text" formControlName="houseAddress">
+    </label>
+
+    <label>
+      Zip Code:
+      <input type="text" formControlName="zipCode">
+    </label>
+
+    <label>
+      Land Fill Quantity:
+      <input type="text" formControlName="landfillQuantity">
+    </label>
+  
+    <label>
+      Recycled Quantity:
+      <input type="text" formControlName="recycledQuantity">
+    </label>
+    <label>
+      Date:
+      <input type="text" formControlName="dateControl">
+    </label>
+  
+  </form>
+  <button type="button" class="btn btn-primary" (click)="submitForm()" >Submit Garbage Data</button>
 </div>
 
 <router-outlet></router-outlet>
