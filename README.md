@@ -2,6 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.18.
 
+This application is deveoped using Angular version 8 and has backend in SpringBoot Java framework https://github.com/vaibhav50596/SmartGarbageBackend. You must have NodeJS installed on your machine in order to run this application.
+You can run this project with "ng serve" command. This app also uses RxJS (Reactive programming) for GET and POST API calls using HTTP Client.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
