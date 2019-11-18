@@ -21,7 +21,6 @@ export class AppComponent implements OnInit {
 
   getData() {
     this.smartGarbageService.get().subscribe((data: any) => {
-      console.log(data);
       this.student = data;
     });
   }
@@ -34,8 +33,6 @@ export class AppComponent implements OnInit {
       recycledQuantity: new FormControl(''),
       dateControl: new FormControl(''),
     })
-
-    console.log(this.garbageForm);
   }
 
   submitForm() {
@@ -43,9 +40,8 @@ export class AppComponent implements OnInit {
     obj['houseAddress'] = this.garbageForm.controls.houseAddress.value;
     obj['zipCode'] = this.garbageForm.controls.zipCode.value;
     obj['landfillQuantity'] = this.garbageForm.controls.landfillQuantity.value;
-    obj['recycledQuantity'] = this.garbageForm.controls.landfillQuantity.value;
+    obj['recycledQuantity'] = this.garbageForm.controls.recycledQuantity.value;
     obj['date'] = this.garbageForm.controls.dateControl.value;
-    console.log(obj)
     this.smartGarbageService.postData(obj).subscribe((data: any) => {
       this.getData();
       this.garbageForm.reset();
