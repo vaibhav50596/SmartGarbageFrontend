@@ -69,4 +69,28 @@ div {
   padding: 20px;
 }
 
+.position {
+  height: 46px;
+  width: 113px;
+}
+
+.heading-table {
+  margin-left: 211px;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.form-position {
+  display: block;
+}
+
+.content {
+  margin: 16px auto;
+}
+
+.waste-heading {
+  font-size: 18px;
+  font-style: italic;
+}
+
  

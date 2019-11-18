@@ -6,15 +6,16 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class SmartGarbageService {
 
-  private URL = "http://springbootsou.us-east-1.elasticbeanstalk.com/getgarbage";
+  private getURL = "http://localhost:5006/getgarbage";
+  private postURL = "http://localhost:5006/postgarbage";
 
   constructor(private http: HttpClient) { }
 
   public get() {
-    return this.http.get(this.URL);
+    return this.http.get(this.getURL);
   }
 
   public postData(obj: any) {
-    return this.http.post(this. URL, obj);
+    return this.http.post(this. postURL, obj);
   }
 }
