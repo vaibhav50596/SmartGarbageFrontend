@@ -14,7 +14,7 @@ Image 1 : calling GET API (retrieving records from database)
 
 
 
-Image 1 : calling POST API (inserting records in database)
+Image 2 : calling POST API (inserting records in database)
 
 ![Image 2 - Angular Reactive form - calling Post API](https://user-images.githubusercontent.com/25607852/69210022-a5f98280-0b16-11ea-9a3a-d6ecc2397c5c.PNG)
 
