@@ -8,9 +8,10 @@ You can run this project with "ng serve" command. This app also uses RxJS (React
 
 ## Application screenshots 
 
-https://user-images.githubusercontent.com/25607852/69210012-9f6b0b00-0b16-11ea-85ef-fb39b484587f.PNG
+![Table Image 1 - calling GET API](https://user-images.githubusercontent.com/25607852/69210012-9f6b0b00-0b16-11ea-85ef-fb39b484587f.PNG)
 
-https://user-images.githubusercontent.com/25607852/69210022-a5f98280-0b16-11ea-9a3a-d6ecc2397c5c.PNG
+
+![Image 2 - Angular Reactive form - calling Post API](https://user-images.githubusercontent.com/25607852/69210022-a5f98280-0b16-11ea-9a3a-d6ecc2397c5c.PNG)
 
 ## Development server
 
